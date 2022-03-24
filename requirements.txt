@@ -1,0 +1,19 @@
+# pip3 install -r requirements.txt
+
+# Base
+torch
+torchvision
+scikit-learn
+numpy
+opencv-python
+pillow
+tqdm
+requests
+
+# Plotting
+pandas
+matplotlib
+
+# API
+fastapi
+uvicorn
