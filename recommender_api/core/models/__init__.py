@@ -1,7 +1,10 @@
 # Import Library
 from contextlib import contextmanager
+
 from sqlalchemy import create_engine
+from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, scoped_session
+
 from recommender_api.config import POSTGRES_URL
 
 
@@ -25,3 +28,6 @@ def session_scope():
         raise
     finally:
         session.close()
+
+
+Base = declarative_base()
