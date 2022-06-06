@@ -17,3 +17,4 @@ matplotlib
 # API
 fastapi
 uvicorn
+sqlalchemy
