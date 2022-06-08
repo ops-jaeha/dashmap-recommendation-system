@@ -4,8 +4,9 @@ from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 
 # Import File
-from config import SERVER_HOST, SERVER_PORT
-from apps import recommend
+from recommender_api.config import SERVER_HOST, SERVER_PORT
+from recommender_api.apps import recommend
+from recommender_api.apps import lecture
 
 
 app = FastAPI()
@@ -19,6 +20,7 @@ app.add_middleware(
 )
 
 app.include_router(recommend.router)
+app.include_router(lecture.router)
 
 
 if __name__ == '__main__':

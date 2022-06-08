@@ -1,13 +1,13 @@
 # Import Library
-from sqlalchemy import Column, BigInteger, VARCHAR
-from recommender_api.config import Base
+from sqlalchemy import Column, VARCHAR, BIGINT
+from recommender_api.core.models import Base
 
 
 class Member(Base):
     __tablename__ = "member"
 
-    id = Column(BigInteger, primary_key=True)
-    email = Column(VARCHAR(255))
-    name = Column(VARCHAR(255))
-    profile_image_url = Column(VARCHAR(255))
-    role = Column(VARCHAR(255))
+    id = Column(BIGINT, primary_key=True, autoincrement=True)
+    email = Column(VARCHAR)
+    name = Column(VARCHAR)
+    profile_image_url = Column(VARCHAR)
+    role = Column(VARCHAR)
