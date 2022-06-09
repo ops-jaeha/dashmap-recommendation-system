@@ -1,13 +1,8 @@
 # pip3 install -r requirements.txt
 
 # Base
-torch
-torchvision
 scikit-learn
 numpy
-opencv-python
-pillow
-tqdm
 requests
 
 # Plotting
@@ -17,3 +12,5 @@ matplotlib
 # API
 fastapi
 uvicorn
+psycopg2
+sqlalchemy
