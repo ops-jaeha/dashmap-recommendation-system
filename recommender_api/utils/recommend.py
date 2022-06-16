@@ -14,7 +14,7 @@ def recommend(session: Session, u_id: int = 0):
         collaborate_result = pd.DataFrame(data=user_based_collaborate, index=data.index, columns=data.index)
 
         similar_user = collaborate_result[u_id].sort_values(ascending=False)[:7].index[1]
-        lecture_id_lst = data.loc[similar_user].sort_values(ascending=False).index[:6]
+        lecture_id_lst = data.loc[similar_user].sort_values(ascending=False).index[1:7]
         lecture_url_lst = list(session.query(Lecture).filter(Lecture.id == f"{lecture_id_lst[i]}").one().url
                    for i in range(len(lecture_id_lst)))
         return lecture_id_lst, lecture_url_lst
