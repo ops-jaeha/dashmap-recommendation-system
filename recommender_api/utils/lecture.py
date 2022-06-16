@@ -1,7 +1,5 @@
 # Import Library
-from fastapi import HTTPException, status
-from sqlalchemy import func
-from sqlalchemy.orm import aliased, Session
+from sqlalchemy.orm import Session
 
 # Import File
 from recommender_api.core.models.watch_history import WatchHistory
