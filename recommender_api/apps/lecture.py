@@ -1,6 +1,5 @@
 # Import Libray
-from fastapi import APIRouter, status, Header
-from typing import Optional
+from fastapi import APIRouter, status
 
 # Import File
 from recommender_api.core.models import session_scope
@@ -14,7 +13,6 @@ router = APIRouter()
 async def watch_lecture(user_id: int, lecture_id: int, ratings: int = 5):
     with session_scope() as session:
         recode_lecture(session=session, u_id=user_id, l_id=lecture_id, r=ratings)
-
         return {
             "message": "success"
         }

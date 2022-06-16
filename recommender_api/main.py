@@ -24,4 +24,4 @@ app.include_router(lecture.router)
 
 
 if __name__ == '__main__':
-    uvicorn.run("recommender_api.main:app", host=SERVER_HOST, port=SERVER_PORT, reload=True)
+    uvicorn.run("main:app", host=SERVER_HOST, port=SERVER_PORT, reload=True)

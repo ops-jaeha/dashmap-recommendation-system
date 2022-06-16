@@ -1,7 +1,5 @@
 # Import Libray
-from fastapi import APIRouter, status, Header
-from typing import Optional
-from datetime import datetime
+from fastapi import APIRouter, status
 
 # Import File
 from recommender_api.core.models import session_scope
